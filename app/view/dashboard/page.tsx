@@ -15,37 +15,37 @@ export default function Dashboard() {
                         alt="Foto de usuario"
                         className="w-30 h-30 object-cover rounded-full"
                     />
-                    <h1 onClick={() => setOpcionesPerfil(!opcionesPerfil)} className="text-gray-500 mt-4 flex items-center gap-2">
+                    <h1 onClick={() => setOpcionesPerfil(!opcionesPerfil)} className="text-gray-500 mt-4 flex items-center gap-2 text-sm">
                         correo@gmail.com <FaChevronDown />
                     </h1>
-                    <div className="w-50">{opcionesPerfil && <ClicPerfil onClose={() => setOpcionesPerfil(false)}></ClicPerfil>}</div>
+                    <div className="w-full">{opcionesPerfil && <ClicPerfil onClose={() => setOpcionesPerfil(false)}></ClicPerfil>}</div>
                 </div>
 
-                <div className="mt-8 font-bold w-full flex flex-col items-center gap-2">
+                <div className="mt-8 font-bold w-full flex flex-col items-center gap-2 px-2">
                     <button
                         onClick={() => setTab("inicio")}
-                        className={`transition-colors duration-300 ease-in-out px-4 py-2 rounded-lg w-70 text-start text-xl cursor-pointer 
+                        className={`transition-colors duration-300 ease-in-out px-4 py-2 rounded-lg text-start text-xl cursor-pointer w-full
                         ${tab === "inicio" ? "bg-yellow-300" : "bg-white"}`}
                     >
                         Inicio
                     </button>
                     <button
                         onClick={() => setTab("planes")}
-                        className={`transition-colors duration-300 ease-in-out px-4 py-2 rounded-lg w-70 text-start text-xl cursor-pointer 
+                        className={`transition-colors duration-300 ease-in-out px-4 py-2 rounded-lg  text-start text-xl cursor-pointer w-full
                         ${tab === "planes" ? "bg-yellow-300" : "bg-white"}`}
                     >
                         Mis planes
                     </button>
                     <button
                         onClick={() => setTab("rutinas")}
-                        className={`transition-colors duration-300 ease-in-out px-4 py-2 rounded-lg w-70 text-start text-xl cursor-pointer 
+                        className={`transition-colors duration-300 ease-in-out px-4 py-2 rounded-lg  text-start text-xl cursor-pointer w-full
                         ${tab === "rutinas" ? "bg-yellow-300" : "bg-white"}`}
                     >
                         Rutinas
                     </button>
                     <button
                         onClick={() => setTab("dietas")}
-                        className={`transition-colors duration-300 ease-in-out px-4 py-2 rounded-lg w-70 text-start text-xl cursor-pointer 
+                        className={`transition-colors duration-300 ease-in-out px-4 py-2 rounded-lg  text-start text-xl cursor-pointer w-full
                         ${tab === "dietas" ? "bg-yellow-300" : "bg-white"}`}
                     >
                         Dietas

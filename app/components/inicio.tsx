@@ -1,11 +1,18 @@
+"use client";
 import { IoIosAdd } from "react-icons/io";
+import NuevoAsesorado from "@/app/components/nuevoAsesorado";
+import { useState } from "react";
 export default function Inicio() {
+    const [mostrarNuevoAsesorado, setMostrarNuevoAsesorado] = useState(false);
     return (
-        <div>
+        <div className="relative">
             <div className="shadow-lg bg-white p-4 rounded-lg">
                 <div className="flex justify-between">
                     <h1 className="font-bold">Mis asesorados</h1>
-                    <button className="flex items-center text-yellow-500 duration-200 cursor-pointer border-1 border-yellow-300 px-4 py-2 rounded-lg hover:bg-yellow-300 hover:text-white">
+                    <button
+                        onClick={() => setMostrarNuevoAsesorado(true)}
+                        className="flex items-center text-yellow-500 duration-200 cursor-pointer border-1 border-yellow-300 px-4 py-2 rounded-lg hover:bg-yellow-300 hover:text-white"
+                    >
                         <IoIosAdd /> Nuevo
                     </button>
                 </div>
@@ -95,6 +102,12 @@ export default function Inicio() {
                     <h2 className="text-gray-500">Planes elaborados</h2>
                 </div>
             </div>
+
+            {mostrarNuevoAsesorado && (
+                <div className="absolute top-0 left-0 w-full h-full flex justify-center items-center">
+                    <NuevoAsesorado onClose={() => setMostrarNuevoAsesorado(false)}></NuevoAsesorado>
+                </div>
+            )}
         </div>
     );
 }
