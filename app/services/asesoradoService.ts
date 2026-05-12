@@ -1,11 +1,11 @@
 // Este servicio envia los datos relacionados a la tabla asesorados y manejo de Token para comprobar la sesión activa.
 
-const API_URL = "http://localhost:3000/api/asesorados";
+const API_URL = "http://127.0.0.1:8000/asesorados";
 
 export const registrarAsesorado = async (datos: any) => {
     const token = localStorage.getItem("token");
 
-    const response = await fetch(`${API_URL}/registrar`, {
+    const response = await fetch(`${API_URL}/`, {
         method: "POST",
         headers: {
             "Content-Type": "application/json",
@@ -25,7 +25,7 @@ export const registrarAsesorado = async (datos: any) => {
 export const getAsesorados = async () => {
     const token = localStorage.getItem("token");
 
-    const response = await fetch(API_URL, {
+    const response = await fetch(`${API_URL}/`, {
         method: "GET",
         headers: {
             Authorization: `Bearer ${token}`,

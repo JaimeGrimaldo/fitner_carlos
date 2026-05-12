@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 import Inicio from "@/app/components/inicio";
 import ClicPerfil from "@/app/components/clicPerfil";
 import Planes from "@/app/components/planes";
+import { FaLock } from "react-icons/fa";
 export default function Dashboard() {
     const [tab, setTab] = useState("inicio");
     const [opcionesPerfil, setOpcionesPerfil] = useState(false);
@@ -47,18 +48,20 @@ export default function Dashboard() {
                         Mis planes
                     </button>
                     <button
-                        onClick={() => setTab("rutinas")}
-                        className={`transition-colors duration-300 ease-in-out px-4 py-2 rounded-lg  text-start text-xl cursor-pointer w-full
+                        //onClick={() => setTab("rutinas")}
+                        className={`transition-colors duration-300 ease-in-out px-4 py-2 rounded-lg  text-start text-xl  w-full flex items-center justify-between text-gray-300
                         ${tab === "rutinas" ? "bg-yellow-300" : "bg-white"}`}
                     >
                         Rutinas
+                        <FaLock />
                     </button>
                     <button
-                        onClick={() => setTab("dietas")}
-                        className={`transition-colors duration-300 ease-in-out px-4 py-2 rounded-lg  text-start text-xl cursor-pointer w-full
+                        //onClick={() => setTab("dietas")}
+                        className={`transition-colors duration-300 ease-in-out px-4 py-2 rounded-lg  text-start text-xl  w-full flex items-center justify-between text-gray-300
                         ${tab === "dietas" ? "bg-yellow-300" : "bg-white"}`}
                     >
                         Dietas
+                        <FaLock />
                     </button>
                 </div>
             </div>

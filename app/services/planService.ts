@@ -1,8 +1,8 @@
-const API_URL = "http://localhost:3000/api/planes";
+const API_URL = "http://127.0.0.1:8000/planes";
 
 export const getPlanes = async () => {
     const token = localStorage.getItem("token");
-    const response = await fetch(API_URL, {
+    const response = await fetch(`${API_URL}/`, {
         headers: { Authorization: `Bearer ${token}`, "Content-Type": "application/json" },
     });
 
@@ -13,7 +13,7 @@ export const getPlanes = async () => {
 export const registrarPlan = async (datos: any) => {
     const token = localStorage.getItem("token");
 
-    const response = await fetch(`${API_URL}/registrar`, {
+    const response = await fetch(`${API_URL}/`, {
         method: "POST",
         headers: {
             "Content-Type": "application/json",

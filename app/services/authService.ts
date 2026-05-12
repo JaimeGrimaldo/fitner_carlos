@@ -7,7 +7,7 @@ interface LoginResponse {
     };
 }
 
-const API_URL = "http://localhost:3000/api/coaches";
+const API_URL = "http://127.0.0.1:8000/coaches";
 
 export const loginCoach = async (email: string, password: string): Promise<LoginResponse> => {
     const response = await fetch(`${API_URL}/login`, {
@@ -28,7 +28,7 @@ export const loginCoach = async (email: string, password: string): Promise<Login
 };
 
 export const registrarCoach = async (datos: any) => {
-    const response = await fetch(`${API_URL}/registro`, {
+    const response = await fetch(`${API_URL}/registrar`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(datos),

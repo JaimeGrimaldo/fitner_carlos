@@ -146,19 +146,6 @@ export default function NuevoAsesorado({ onClose }: AsesoradoProps) {
                 </div>
 
                 <h1 className="font-semibold text-md mt-4">Plan o suscripción de tu asesorado</h1>
-                {/*                 <select
-                    onChange={handleChange}
-                    name="id_plan_coach"
-                    value={formData.id_plan_coach}
-                    id=""
-                    className="bg-gray-100 px-4 py-2 rounded-lg focus:outline-none w-full"
-                >
-                    {planes.map((plan: any) => (
-                        <option key={plan.id_plan_coach} value={plan.id_plan_coach} className="capitalize">
-                            {plan.nombre_plan}
-                        </option>
-                    ))}
-                </select> */}
 
                 <div className="grid xl:grid-cols-4 gap-4 mt-1 grid-cols-2">
                     {planes.map((plan: any) => (
